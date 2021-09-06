@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+           Length of Arrays
+        </title>
+    </head>
+    <body>
+     <p>Click the button you will get the length of each string.</p> 
+     <button onClick="stringLength()">Click now</button>
+     <p id="demo"></p>
+        <script>
+           const materials = [ 'Hydrogen' , 'Helium' , 'Lithium', 'Beryllium'];
+           function stringLength() {
+               var length = document.getElementById("demo")
+               length.innerHTML = materials.map(n => n.length);
+           }
+            </script>
+    </body>
+</html>
