@@ -1,45 +1,42 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>
-        Dynamic Driven Dropdown List
-    </title>
-    <script>
-        var state = {
-            AndhraPradesh: ["Nellore", "Chittor", "Guntur"],
-            Telegana: ["Hyderabad", "Warangal", "Khammam"],
-            Tamilnadu: ["Vellore", "Thiruvallur", "Kancheepuram"]
-        };
-
-        function list(value) {
-            if (value.length == 0) document.getElementById("district").innerHTML = "<option></option>";
-            else {
-                var option = "";
-                for (district in state[value]) {
-                    option += "<option>" + state[value][district] + "</option>";
-                }
-                document.getElemetById("district").innerHTML = option;
-            }
-        }
-
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Dropdown</title>
 </head>
 
 <body>
-    <select id="input" onChange="list(this.value);">
-        <option value="">State</option>
-        <option value="AndhraPradesh"> AndhraPradesh</option>
-        <option value="Telegana"> Telegana</option>
-        <option value="Tamilnadu"> Tamilnadu</option>
+    <form>
+        <div class="form-group col-md-4">
+            <label for="inputState">State</label>
+            <select class="form-control" id="inputState">
+                <option value="SelectState">Select State</option>
+                <option value="Andra Pradesh">Andra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                
+            </select>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputDistrict">District</label>
+            <select class="form-control" id="inputDistrict">
+                <option value="">-- select one -- </option>
+            </select>
+        </div>
 
+    </form>
 
-    </select>
-    <select id="district" name="district">
-        <option value="">District</option>
-       
-    </select>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script src="./DynamicDropdown.js"></script>
 
 </body>
 
